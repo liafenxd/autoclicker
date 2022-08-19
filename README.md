@@ -6,7 +6,7 @@ Since I'm getting more familiar with process injection I decided to make an inje
 This autoclicker works on **any** version of minecraft.
 
 # Dependencies
- - [Process Hacker 2](https://processhacker.sourceforge.io/downloads.php) (or any process viewer of your choice) for injection
+ - [A DLL Injection Client](https://github.com/the-antibody/dll-injector) (you can use any of your choice, but mine is linked there)
 
 # Media
 ![image](https://user-images.githubusercontent.com/71285258/185497254-bd3923d7-db68-4a05-9f3b-6d80bf231ff4.png)
@@ -16,11 +16,10 @@ This autoclicker works on **any** version of minecraft.
 To install this autoclicker, download the DLL file [here](https://github.com/the-antibody/autoclicker/releases/tag/1.0.0).<br />
 
 ### Injection
-To inject the client, open [Process Hacker 2](https://processhacker.sourceforge.io/downloads.php) (or any process viewer of your choice), right click on your minecraft process (For Lunar Client, click on the top Lunar Client process), hover over the `Miscellaneous` tab, and find the `Inject DLL` option.<br />
-Once clicked, open the DLL that you downloaded, and follow through on the prompt.
+To inject the client, open your injection client (I will be using mine as the example), enter in the path to the DLL that you downloaded, and type in `Lunar Client` (or whatever minecraft client you're using), and then click `Inject`.
 
 ### Images
-![image](https://user-images.githubusercontent.com/71285258/185497994-0b1b2bfa-3942-44e5-8365-bb3bddfdd8c9.png)
+![image](https://user-images.githubusercontent.com/71285258/185554373-566ad7a7-559e-493e-83bf-c821930779a9.png)
 
 # Information for Developers
 

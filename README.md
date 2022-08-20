@@ -13,7 +13,7 @@ This autoclicker works on **any** version of minecraft.
 ![image](https://user-images.githubusercontent.com/71285258/185497281-d8076bd5-e544-4f62-b1e0-ed76a3fad979.png)
 
 # Installation
-To install this autoclicker, download the DLL file [here](https://github.com/the-antibody/autoclicker/releases/tag/1.0.0).<br />
+To install this autoclicker, download the DLL file [here](https://github.com/the-antibody/autoclicker/releases/tag/1.0.1).<br />
 
 ### Injection
 To inject the client, open your injection client (I will be using mine as the example), enter in the path to the DLL that you downloaded, and type in `Lunar Client` (or whatever minecraft client you're using), and then click `Inject`.

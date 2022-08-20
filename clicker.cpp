@@ -1,11 +1,12 @@
 #include "clicker.h"
 
 // constructor
-clicker::clicker(int cps, std::string button, char toggle_on, char toggle_off, int keys[])
+clicker::clicker(int min_cps, int max_cps, std::string button, char toggle_on, char toggle_off, int keys[])
 {
     this->toggle = false;
     this->holding = false;
-    this->cps = cps;
+    this->min_cps = min_cps;
+    this->max_cps = max_cps;
     this->button = button;
     this->toggle_on = toggle_on;
     this->toggle_off = toggle_off;
@@ -32,14 +33,19 @@ void clicker::set_holding(bool holding)
 void clicker::set_cps()
 {
     // get CPS
-    std::cout << "CPS: ";
-    std::string cps_str;
-    std::cin >> cps_str;
+    std::cout << "Min CPS: ";
+    std::string min_cps_str;
+    std::cin >> min_cps_str;
+
+    std::cout << "Max CPS: ";
+    std::string max_cps_str;
+    std::cin >> max_cps_str;
 
     try
     {
         // set cps
-        this->cps = std::stoi(cps_str);
+        this->min_cps = std::stoi(min_cps_str);
+        this->max_cps = std::stoi(max_cps_str);
     }
     catch (...)
     {
@@ -132,6 +138,21 @@ void clicker::set_toggle_off()
     }
 }
 
+// get random cps function
+int clicker::get_random_cps()
+{
+    // reset random time
+    srand(time(0));
+
+    // get min and max
+    int min = this->get_min_cps();
+    int max = this->get_max_cps();
+
+    // get random CPS
+    int cps = (rand() % (max - min) + min) + 1;
+
+    return cps;
+}
 
 // click function
 void clicker::click()
@@ -158,7 +179,8 @@ void clicker::print_settings()
 {
     // print information
     system("cls");
-    std::cout << "CPS: " << this->get_cps() << std::endl;
+    std::cout << "Min CPS: " << this->get_min_cps() << std::endl;
+    std::cout << "Max CPS: " << this->get_max_cps() << std::endl;
     std::cout << "Button: " << this->get_button() << std::endl << std::endl;
     std::cout << this->get_toggle_on() << " - Toggle On" << std::endl;
     std::cout << this->get_toggle_off() << " - Toggle Off" << std::endl;

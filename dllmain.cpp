@@ -49,7 +49,7 @@ DWORD WINAPI load(HMODULE hModule)
     int keys[] = { VK_LBUTTON, MOUSEEVENTF_LEFTUP, MOUSEEVENTF_LEFTUP };
 
     // create clicker class
-    clicker clicker(10, "Left", 'Q', 'Z', keys);
+    clicker clicker(10, 10, "Left", 'Q', 'Z', keys);
     clicker.set_cps();
     clicker.set_button();
     clicker.set_toggle_on();
@@ -101,7 +101,7 @@ DWORD WINAPI load(HMODULE hModule)
                 clicker.click();
 
                 // sleep for delay
-                Sleep(1000 / clicker.get_cps());
+                Sleep(1000 / clicker.get_random_cps());
             }
         }
     }

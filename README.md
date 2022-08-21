@@ -9,7 +9,7 @@ This autoclicker works on **any** version of minecraft.
  - [A DLL Injection Client](https://github.com/the-antibody/dll-injector) (you can use any of your choice, but mine is linked there)
 
 # Media
-![image](https://user-images.githubusercontent.com/71285258/185497254-bd3923d7-db68-4a05-9f3b-6d80bf231ff4.png)
+![image](https://user-images.githubusercontent.com/71285258/185803210-4b81c51b-74ed-41c0-bdde-7d39f3298ccf.png)
 ![image](https://user-images.githubusercontent.com/71285258/185497281-d8076bd5-e544-4f62-b1e0-ed76a3fad979.png)
 
 # Installation

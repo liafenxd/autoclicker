@@ -70,14 +70,14 @@ DWORD WINAPI load(HMODULE hModule)
         }
 
         // toggle off
-        if (GetAsyncKeyState(clicker.get_toggle_off()) && !GetAsyncKeyState(VK_CONTROL))
+        if (GetAsyncKeyState(clicker.get_toggle_off()) && (!GetAsyncKeyState(VK_CONTROL) && !GetAsyncKeyState(VK_SHIFT)))
         {
             // set toggle and change color
             clicker.set_toggle(false);
             system("color 0f");
         }
         // self destruct
-        else if (GetAsyncKeyState(clicker.get_toggle_off()) && GetAsyncKeyState(VK_CONTROL))
+        else if (GetAsyncKeyState(clicker.get_toggle_off()) && (GetAsyncKeyState(VK_CONTROL) && GetAsyncKeyState(VK_SHIFT)))
         {
             // self destruct & break
             clicker.self_destruct();

@@ -184,6 +184,6 @@ void clicker::print_settings()
     std::cout << "Button: " << this->get_button() << std::endl << std::endl;
     std::cout << this->get_toggle_on() << " - Toggle On" << std::endl;
     std::cout << this->get_toggle_off() << " - Toggle Off" << std::endl;
-    std::cout << "Ctrl + " << this->get_toggle_off() << " - Self Destruct" << std::endl << std::endl;
+    std::cout << "Ctrl + Shift + " << this->get_toggle_off() << " - Self Destruct" << std::endl << std::endl;
     std::cout << "Hold down your left mouse button to click." << std::endl;
 }
